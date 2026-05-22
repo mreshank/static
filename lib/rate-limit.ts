@@ -1,4 +1,4 @@
-import { kv } from "@vercel/kv";
+import { kv } from "@/lib/kv";
 
 // Edge-native Web Crypto SHA-256 hashing
 async function sha256(message: string): Promise<string> {

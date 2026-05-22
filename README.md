@@ -77,11 +77,11 @@ Create a `.env.local` file in the root directory (based on [.env.local.example](
 
 ```env
 # Vercel Blob Token
-BLOB_READ_WRITE_TOKEN="vercel_blob_rw_..."
+STATIC_BLOB_READ_WRITE_TOKEN="vercel_blob_rw_..."
 
 # Vercel KV (Upstash Redis)
-KV_REST_API_URL="https://..."
-KV_REST_API_TOKEN="..."
+STATIC_KV_REST_API_URL="https://..."
+STATIC_KV_REST_API_TOKEN="..."
 
 # Clerk Authentication Keys
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="pk_..."
@@ -152,7 +152,7 @@ git push -u origin main
 1. Once deployed, navigate to the **Storage** tab on your Vercel Project Dashboard.
 2. Connect a new **Vercel Blob** database.
 3. Connect a new **Vercel KV (Redis)** database.
-4. Vercel will automatically inject `BLOB_READ_WRITE_TOKEN`, `KV_URL`, `KV_REST_API_URL`, and `KV_REST_API_TOKEN` to your Environment Variables.
+4. Vercel will automatically inject `STATIC_BLOB_READ_WRITE_TOKEN`, `KV_URL`, `STATIC_KV_REST_API_URL`, and `STATIC_KV_REST_API_TOKEN` to your Environment Variables.
 5. Redeploy/Promote to Production so Vercel hooks up the storage tokens.
 
 ---

@@ -17,6 +17,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const jsonResponse = await handleUpload({
+      token: process.env.STATIC_BLOB_READ_WRITE_TOKEN || process.env.BLOB_READ_WRITE_TOKEN,
       body,
       request,
       onBeforeGenerateToken: async () => {
